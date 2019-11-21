@@ -1,19 +1,23 @@
 var hopeless = "true";
 var birdeyes = 350;
+var r, g, b;
 
 function setup() {
   // put setup code here
-    createCanvas(1280, 720)
+    createCanvas(1280, 720);
+    r = random(255);
+    g = random(255);
+    b = random(255);
 }
 
 function draw() {
     //im going to make a smiling blue man with light in his teeth. his smile is fake not real ok
   // don't try to kill your brain please (:
 // ok everything that you learn cease to exist ): sad
-    background("#543a63");
+    background(r, g, b);
     fill("#70fdff");
     ellipse(600, 360, 400, 400);
-    fill("ffffff");
+    fill("#ffffff");
     //thanos controls your mouth
     if (hopeless ==="true"){
         arc(600, 380, 280, 280, 0, PI);
@@ -33,8 +37,10 @@ function draw() {
 function keyPressed(){
     if (hopeless==="true"){
         hopeless="false";
+        background(r, g, b);
     }else{
         hopeless="true"
+        background(r, g, b);
     }
     
     /* ellipse(600, 360, 400, 400);
